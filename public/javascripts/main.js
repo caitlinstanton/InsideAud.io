@@ -35,7 +35,6 @@ $submitBtn.click(function(){
     //Logic for play pause restart button on live card
     if(finished){
         $submitBtn.children().replaceWith("<i class='mdi-av-pause'></i>");
-	
         $submitBtn.toggleClass('red', true);
         $submitBtn.toggleClass('green', false);
         $loginBtn.toggleClass('disabled', true);
@@ -44,7 +43,6 @@ $submitBtn.click(function(){
     } else if(capturing){
         pauseCapture();
     } else {
-		console.log("YAAAS");
         captureVideo();
     }
 })
