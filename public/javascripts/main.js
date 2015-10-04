@@ -47,6 +47,8 @@ $submitBtn.click(function(){
         pauseCapture();
     } else {
         captureVideo();
+		   var dataURI = canvas.toDataURL('image/jpeg', .2);
+    postImage(dataURI);
     }
 })
 
@@ -119,7 +121,7 @@ function postImage(dataURI){
             data = data['data']
             liveEmotions = data;
             $('#lv-angry').css('width', (data.Angry*100)+'%');
-            $('#lv-sad').css('width', (data.Sad*100)+'%');
+            $('#lv-sad').css('width', (0.5*100)+'%');
             $('#lv-neutral').css('width', (data.Neutral*100)+'%');
             $('#lv-surprise').css('width', (data.Surprise*100)+'%');
             $('#lv-fear').css('width', (data.Fear*100)+'%');
