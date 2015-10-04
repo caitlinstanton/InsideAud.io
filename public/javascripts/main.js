@@ -29,15 +29,13 @@ var exampleEmotions;
 var liveEmotions;
 var metric;
 
-//Get Initial Example
-getExample();
 
 //On Click Functions
 $submitBtn.click(function(){
     //Logic for play pause restart button on live card
     if(finished){
-        getExample();
         $submitBtn.children().replaceWith("<i class='mdi-av-pause'></i>");
+	
         $submitBtn.toggleClass('red', true);
         $submitBtn.toggleClass('green', false);
         $loginBtn.toggleClass('disabled', true);
@@ -46,6 +44,7 @@ $submitBtn.click(function(){
     } else if(capturing){
         pauseCapture();
     } else {
+		console.log("YAAAS");
         captureVideo();
     }
 })
@@ -71,26 +70,6 @@ $loginBtn.click(function(){
         alert('You need to match emotional profiles with the picture on the left');
     }
 });
-
-function getExample() {
-    //fetch picture and emotional profile from server
-    console.log("button pushed")
-    $.get('/image', {image:image})
-    .done(function (data, status){
-        exampleEmotions = data.emotions;
-        image = data.file
-        $exampleImg.attr('src', 'images/'+data.file);
-        $('#ex-angry').css('width', (exampleEmotions.Angry*100)+'%');
-        $('#ex-sad').css('width', (exampleEmotions.Sad*100)+'%');
-        $('#ex-neutral').css('width', (exampleEmotions.Neutral*100)+'%');
-        $('#ex-surprise').css('width', (exampleEmotions.Surprise*100)+'%');
-        $('#ex-fear').css('width', (exampleEmotions.Fear*100)+'%');
-        $('#ex-happy').css('width', (exampleEmotions.Happy*100)+'%');
-    })
-    .error(function (data, status){
-        console.log(status);
-    })
-}
 
 function pauseCapture(){
     //Grab image from video and put it on canvas, pause video
