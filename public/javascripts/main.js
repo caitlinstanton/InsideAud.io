@@ -46,7 +46,7 @@ $submitBtn.click(function(){
     } else if(capturing){
         pauseCapture();
     } else {
-        captureVideo();
+        //captureVideo();
 		   var dataURI = canvas.toDataURL('image/jpeg', .2);
     postImage(dataURI);
     }
