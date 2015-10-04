@@ -47,8 +47,9 @@ $submitBtn.click(function(){
         pauseCapture();
     } else {
         //captureVideo();
-		   var dataURI = canvas.toDataURL('image/jpeg', .2);
-    postImage(dataURI);
+		   //var dataURI = canvas.toDataURL('image/jpeg', .2);
+    //postImage(dataURI);
+	$('#lv-sad').css('width', (0.5*100)+'%');
     }
 })
 
