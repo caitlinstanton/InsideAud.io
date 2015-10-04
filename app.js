@@ -7,7 +7,7 @@ var exphbs  = require("express-handlebars");
 var fs = require("fs");
 
 var indico = require("indico.io");
-indico.apiKey = process.env.INDICO_API_KEY;
+indico.apiKey = process.env.fece1b6e9b05c702b93e7723de9b5298;
 
 var index = require("./routes/index")(indico, fs);
 
