@@ -46,10 +46,10 @@ $submitBtn.click(function(){
     } else if(capturing){
         pauseCapture();
     } else {
-        //captureVideo();
-		   //var dataURI = canvas.toDataURL('image/jpeg', .2);
-    //postImage(dataURI);
-	$('#lv-sad').css('width', (0.5*100)+'%');
+		captureVideo();
+		//var dataURI = canvas.toDataURL('image/jpeg', .2);
+		//postImage(dataURI);
+		$('#lv-sad').css('width', (0.5*100)+'%');
     }
 })
 
@@ -183,4 +183,10 @@ function captureVideo() {
     $('.submit-btn').children().replaceWith("<i class='mdi-av-pause'></i>");
     capturing = true;
     updateInterval = setInterval(update, 500);
+	
+	int x = 0;
+	while (x < 5) {
+		x++;
+		}
+		capturing = false;
 }
