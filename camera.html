@@ -1,0 +1,91 @@
+
+<html><head>
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="public/css/materialize.css" media="screen,projection">
+
+    <link type="text/css" rel="stylesheet" href="public/css/main.css">
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  </head>
+
+  <body>
+    <header>
+      <div class="navbar-fixed">
+        <nav>
+          <div class="nav-wrapper">
+            <div class="container">
+              <a href="#" class="brand-logo">Emotcha</a>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <div class="outer-container">
+	<div class="row">
+		<div class="section white">
+			<div class="row container">
+				<h1 class="header">The Emotional Captcha: </h1>
+				<h4 class="header sub-header"><small> What's More <big>Human</big> than <big>Emotion</big>?</small></h4>
+			</div>
+		</div>
+	</div>
+
+	<div class="emotcha-container" ,="" id="emotcha-target">
+		<div class="row">
+
+			<div class="col s12 m4 live-col">
+				<div class="card picture-card live-card">
+					<div class="card-image">
+						<video width="600" ,="" height="450" autoplay=""></video>
+					</div>
+					<div class="card-content">
+						<div class="emotions">
+							<div class="progress">
+								<div id="lv-angry" ,="" class="determinate" style="width: 1%"> Angry </div>
+							</div>
+							<div class="progress">
+								<div id="lv-sad" ,="" class="determinate" style="width: 1%"> Sad </div>
+							</div>
+							<div class="progress">
+								<div id="lv-neutral" ,="" class="determinate" style="width: 1%"> Neutral </div>
+							</div>
+							<div class="progress">
+								<div id="lv-surprise" ,="" class="determinate" style="width: 1%"> Surprise </div>
+							</div>
+							<div class="progress">
+								<div id="lv-fear" ,="" class="determinate" style="width: 1%"> Fear </div>
+							</div>
+							<div class="progress">
+								<div id="lv-happy" ,="" class="determinate" style="width: 1%"> Happy </div>
+							</div>
+						</div>
+						<a class="btn-floating btn-large waves-effect waves-light submit-btn red" id="submitBtn"><i class="mdi-av-play-arrow"></i></a>
+					</div>
+				</div>
+			</div>
+
+	</div>
+</div>
+
+    </main>
+
+    <footer class="page-footer">
+      <div class="footer-copyright">
+        <div class="container">
+        </div>
+      </div>
+    </footer>
+
+    <!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="public/javascripts/materialize.js"></script>
+     <script src="https://cdn.rawgit.com/jaysalvat/jquery.facedetection/master/dist/jquery.facedetection.min.js"></script>
+     <script type="text/javascript" src="public/javascripts/jquery.smooth-scroll.min.js"></script>
+     <script type="text/javascript" src="public/javascripts/main.js"></script>
+	 <script type="text/javascript" src="routes/index.js"></script>
+  
+
+<div class="hiddendiv common"></div></body></html>
