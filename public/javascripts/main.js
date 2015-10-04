@@ -164,7 +164,7 @@ function postImage(dataURI){
 
 function captureVideo() {
     //Start webcam video playing
-
+	console.log("video");
     navigator.getUserMedia  = navigator.getUserMedia ||navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia;
 
 
